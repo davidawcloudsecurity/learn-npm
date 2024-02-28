@@ -4,7 +4,7 @@ const { MongoClient } = require('mongodb');
 const uri = 'mongodb://localhost:27017'; // Default MongoDB URI
 
 // Database Name
-const dbName = 'yourDatabaseName';
+const dbName = 'testDB';
 
 // Create a new MongoClient
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -17,6 +17,16 @@ async function connectToMongoDB() {
         console.log('Connected to MongoDB');
 
         // Select a database
+        const adminDb = client.db('admin');
+        const databases = await adminDb.admin().listDatabases();
+        const dbExists = databases.databases.some(db => db.name === dbName);
+
+        if (!dbExists) {
+            console.log(`Database '${dbName}' doesn't exist. Creating it...`);
+            await adminDb.admin().createDatabase(dbName);
+            console.log(`Database '${dbName}' created successfully.`);
+        }
+
         const db = client.db(dbName);
 
         // Perform operations with the database
