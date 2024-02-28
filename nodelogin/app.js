@@ -7,7 +7,7 @@ const uri = 'mongodb://localhost:27017'; // Default MongoDB URI
 const dbName = 'yourDatabaseName';
 
 // Create a new MongoClient
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const client = new MongoClient(uri, { useUnifiedTopology: true });
 
 // Connect to the MongoDB server
 async function connectToMongoDB() {
