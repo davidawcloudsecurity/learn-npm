@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "mysql": "^2.18.1"
+  },
+  "name": "login",
+  "version": "1.0.0",
+  "main": "login.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidawcloudsecurity/learn-npm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidawcloudsecurity/learn-npm/issues"
+  },
+  "homepage": "https://github.com/davidawcloudsecurity/learn-npm#readme",
+  "description": ""
+}
