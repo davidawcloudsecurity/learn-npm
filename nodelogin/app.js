@@ -4,7 +4,7 @@ const { MongoClient } = require('mongodb');
 const uri = 'mongodb://localhost:27017'; // Default MongoDB URI
 
 // Database Name
-const dbName = 'yourDatabaseName';
+const dbName = 'testDB';
 
 // Create a new MongoClient
 const client = new MongoClient(uri, { useUnifiedTopology: true });
